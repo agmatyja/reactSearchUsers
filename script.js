@@ -8,6 +8,7 @@ class User extends React.Component {
     );
   }
 }
+
 class UsersList extends React.Component {
   get users() {
     return this.props.users.map(user => <User key={user.id} user={user}/>);
@@ -21,6 +22,7 @@ class UsersList extends React.Component {
     );
   }
 }
+
 class App extends React.Component {
   constructor() {
     super();
@@ -59,6 +61,7 @@ class App extends React.Component {
     );
   }
 }
+
 ReactDOM.render(
   (<App />),
   document.getElementById('root')
