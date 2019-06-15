@@ -51,15 +51,10 @@ var UsersList = function (_React$Component2) {
       return React.createElement(
         'div',
         null,
-        this.users
+        this.props.users.map(function (user) {
+          return React.createElement(User, { key: user.id, user: user });
+        })
       );
-    }
-  }, {
-    key: 'users',
-    get: function get() {
-      return this.props.users.map(function (user) {
-        return React.createElement(User, { key: user.id, user: user });
-      });
     }
   }]);
 
